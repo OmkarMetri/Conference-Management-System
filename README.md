@@ -17,10 +17,7 @@ the server can be subsequently be started by just running `flask run`
 
 ### Connecting to the dataset
 
-This only needs to be done when running the app server for the first time.
-
-Inside the project root repo create a directory called datasets.
-Place WorldConferenceAlerts.csv [UPDATED] file ([Download file](https://drive.google.com/open?id=1cwDvB4NOG8F30iaaNXjZNvofJhaicY7-)) there or replace the older version if it exists. 
+This only needs to be done when running the app server for the first time. 
 
 Open a new terminal and cd into the repo directory and:
 
@@ -28,9 +25,7 @@ Open a new terminal and cd into the repo directory and:
 running by following the previous section)
 
 ## Running the front-end server
-
-Clone/pull from the ConfHub-FE in a directory, change into "frontend"
-directory and run
+Change into "frontend" directory and run
 `python -m http.server`
 
 **The app will start running on localhost:8000 and this will be the sole
