@@ -1,4 +1,3 @@
-import pandas as pd
 import sqlite3
 import csv
 
@@ -108,11 +107,12 @@ def populate_university_programs(database):
     c.execute(create_table)
 
     for row in university_programs:
-        try:
-            c.execute(insert, row)
-        except Exception as e:
-            print(str(e))
-            continue
+        programs = row[1].split(";;;")
+        for program in programs:
+            try:
+                c.execute(insert, (row[0], program))
+            except:
+                continue
     conn.commit()
     conn.close()
 
